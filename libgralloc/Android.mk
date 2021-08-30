@@ -41,6 +41,6 @@ LOCAL_SHARED_LIBRARIES        := $(common_libs) libqdutils libdl
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdmemalloc\"
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 LOCAL_SRC_FILES               := ionalloc.cpp alloc_controller.cpp
-LOCAL_COPY_HEADERS            := alloc_controller.h memalloc.h
+LOCAL_EXPORT_C_INCLUDE_DIRS   := alloc_controller.h memalloc.h
 
 include $(BUILD_SHARED_LIBRARY)
